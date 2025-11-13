@@ -1,5 +1,19 @@
-torch
-numpy
-tqdm
-matplotlib
-pandas
+# Core PyTorch libraries
+torch==2.1.0
+torchvision==0.16.0
+torchaudio==2.1.0
+
+# Data manipulation and processing
+numpy==1.25.0
+pandas==2.1.1
+regex==2023.10.3
+
+# Utilities
+tqdm==4.66.1
+pickle5==0.0.12
+
+# Optional visualization
+matplotlib==3.8.1
+
+# For GPU compatibility (CUDA)
+# Note: On Colab, torch automatically installs compatible CUDA version
