@@ -1,3 +1,5 @@
+#Mahabharata GPT – Character-Level Dialogue Generator
+
 ✨ Project Overview
 
 Mahabharata GPT is a character-level transformer model that generates authentic Mahabharata-style dialogues for different characters like Draupadi, Krishna, and Arjuna.
