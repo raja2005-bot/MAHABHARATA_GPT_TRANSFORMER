@@ -1,22 +1,20 @@
-#Mahabharata GPT – Character-Level Dialogue Generator
+**#Mahabharata GPT – Character-Level Dialogue Generator**
 
-✨ Project Overview
+**✨ Project Overview**
 
 Mahabharata GPT is a character-level transformer model that generates authentic Mahabharata-style dialogues for different characters like Draupadi, Krishna, and Arjuna.
 
 It’s trained on custom .txt datasets and learns both character speech patterns and sequences, enabling context-aware text generation.
 
-Key Features:
+**Key Features:**
 
 Character-level dialogue generation
-
 Context-aware character embeddings
-
 Checkpoint saving for resuming or testing at any stage
-
 GPU-optimized training with PyTorch
 
-📂 Project Structure
+**📂 Project Structure**
+
 maha_project/
 │
 ├─ data/                  # Text files of Mahabharata dialogues
@@ -29,7 +27,7 @@ maha_project/
 ├─ requirements.txt       # All dependencies
 └─ README.md              # Project documentation
 
-⚡ Live Demo (Optional)
+**⚡ Live Demo (Optional)**
 
 Generate dialogues in style of Mahabharata using trained checkpoints:
 
@@ -43,13 +41,13 @@ Generate dialogues in style of Mahabharata using trained checkpoints:
   --device cuda
 
 
-Example output:
-
+**Example output:
+**
 Draupadi: O Krishna, why do the Pandavas hesitate in the court?  
 Krishna: Fear not, Draupadi. The dharma will guide us through.  
 Arjuna: I shall obey the path of righteousness.
 
-🛠️ Installation
+**🛠️ Installation**
 
 Clone the repo:
 
@@ -57,16 +55,14 @@ git clone https://github.com/yourusername/mahabharata-gpt.git
 cd mahabharata-gpt
 
 
-Install dependencies:
+**Install dependencies**:
 
 pip install -r requirements.txt
-
-
 Enable GPU in Colab or local machine for faster training:
-
 Runtime → Change runtime type → GPU
 
-🏋️ Training
+**🏋️ Training**
+
 !python src/train.py \
   --data_dir data \
   --save_dir checkpoints \
@@ -78,7 +74,7 @@ Runtime → Change runtime type → GPU
   --device cuda
 
 
-Parameters explained:
+**Parameters explained:**
 
 Parameter	Description
 batch_size	Number of sequences processed per step
@@ -89,7 +85,7 @@ device	cuda for GPU, cpu if GPU unavailable
 
 Checkpoints: Saved in checkpoints/ as ckpt_XXXX.pt along with meta.pkl.
 
-🔮 Inference / Text Generation
+**🔮 Inference / Text Generation**
 !python src/sample.py \
   --ckpt checkpoints/ckpt_2000.pt \
   --start "Krishna: " \
@@ -100,8 +96,8 @@ Checkpoints: Saved in checkpoints/ as ckpt_XXXX.pt along with meta.pkl.
   --device cuda
 
 
-Parameters:
-
+**Parameters:
+**
 --start → Prompt text
 
 --length → Number of characters to generate
@@ -110,7 +106,7 @@ Parameters:
 
 --top_k → Restrict prediction to top-k most probable characters
 
-🔗 Workflow
+**🔗 Workflow**
 graph LR
 A[Raw Text Files] --> B[data.py: dataset, vocab, batching]
 B --> C[train.py: training loop + checkpoint saving]
@@ -118,20 +114,15 @@ C --> D[model.py: GPTMini transformer model]
 C --> E[checkpoints: saved models + meta]
 E --> F[sample.py: text generation]
 
-🌟 Future Improvements
+**🌟 Future Improvements**
 
 Increase dataset for better context coherence
-
 Larger block size and batch size for longer sequences
-
 Word-level GPT for more human-like sentences
-
 Attention-based character embeddings for consistent dialogue
 
-📚 References
+**📚 References**
 
 PyTorch Documentation
-
 GPT Paper – Attention Is All You Need
-
 Character-level Language Models – Karpathy
